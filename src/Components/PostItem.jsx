@@ -1,5 +1,4 @@
 import React from 'react'
-import Counter from "./Counter";
 import MyButton from "./UI/Button/MyButton";
 
 const PostItem = (props) => {
@@ -7,13 +6,10 @@ const PostItem = (props) => {
         <div>
             <div className="post">
                 <div className="postContent">
-                    <strong>{props.number}. {props.post.title}</strong>
+                    <strong>{props.post.id}. {props.post.title}</strong>
                     <div>
                         {props.post.body}
                     </div>
-                </div>
-                <div>
-                    <Counter/>
                 </div>
                 <div className="postBtn">
                     <MyButton onClick={() => props.remove(props.post)}>
